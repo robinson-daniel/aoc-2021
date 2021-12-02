@@ -4,7 +4,7 @@ Usage:
 dive.c:
   
 ```
-# Uncomment either __part1__ or __part2__ and compile.  
+# (Un)comment either __part1__ or __part2__ and compile.  
 
 $ gcc dive.c
 $ chmod +x a.out

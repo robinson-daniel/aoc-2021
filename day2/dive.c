@@ -43,7 +43,6 @@ int main(int argc, char *argv[]) {
                     #ifdef __part2__
                         aim += input[i];
                     #endif
-
                 } else if ((strcmp(action,up)) == 0) {
                     printf("%s, %d\n", action, input[i]);
                     #ifdef __part1__

@@ -7,10 +7,12 @@
 #
 
 import sys
+import time
 
 data = []
 depth = 0
 count = 0
+
 
 #
 # Part 1
@@ -30,6 +32,8 @@ for index, current_depth in enumerate(data):
         if current_depth > prev_depth:
             print(data[index],' (increased)')
             count+=1
+            print('count = ',count)
+            print('index = ',index)
         else:
             print(data[index],' (decreased)')
 
@@ -39,4 +43,3 @@ print('There are ', count, ' measurements that are larger than the previous meas
 #
 # Part 2
 #
-
