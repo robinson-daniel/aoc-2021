@@ -22,7 +22,6 @@ int main(int argc, char *argv[]) {
     char action[max_action];
     int horizontal=0, depth=0;
     char forward[] = "forward", down[] = "down", up[] = "up";
-    unsigned long result=0;
 
     /* read sub position from input file & record values as we go */
     if (argc > 1) {
@@ -56,8 +55,7 @@ int main(int argc, char *argv[]) {
                 }
                 i++;
             }
-            result = horizontal * depth;
-            printf("Multiply horizontal with depth: %lu\n", result);
+            printf("Multiply horizontal with depth: %d\n", horizontal * depth);
         fclose(file);
     }
 
