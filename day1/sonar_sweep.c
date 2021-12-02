@@ -18,14 +18,15 @@ void compare(int input[]) {
         if (i == 0) {
             printf("%d (N/A - no previous measurement)\n", input[i]);
         } else if (input[i] > (input[i-1])) {
-            printf("%d (increased)\n", input[++i]);
+            printf("%d (increased)\n", input[i]);
             count++;
         } else {
-            printf("%d (decreased)\n", input[++i]);
+            printf("%d (decreased)\n", input[i]);
         }
     }
 
     printf("\nThere are %d measurements that are larger than the previous measurement\n", count);
+    getchar();
 }
 
 void compare_window(int input[]) {
