@@ -16,8 +16,8 @@ sonar_sweep.py:
 $ python sonar_sweep.py
 ```
 
-I was wondering why my output was off by one
-Going from a 3 digit integer to 4 was too hot to handle
+I was wondering why my output was off by one  
+Going from a 3 digit integer to 4 was too hot to handle  
 ```
 Output:
 ...
@@ -39,7 +39,7 @@ count =  167
 index =  206
 ```
 
-All other times it worked as intended.
+All other times it worked as intended.  
 ```
 Output:
 ...
