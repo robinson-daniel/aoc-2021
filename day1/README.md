@@ -1,5 +1,5 @@
 Usage:  
-<sub>Download the input file.  
+Download the input file + source.  
 
 
 sonar_sweep.c:  
