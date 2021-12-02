@@ -10,8 +10,8 @@ $ ./a.out input
 </br>
 
 sonar_sweep.py:  
-<sub><sup><b>NOT WORKING</b></sup></sub>
-<sub>Tested with python3</sub>
+<sub><sup><b>NOT WORKING</b></sup></sub>  
+<sub>Tested with python3</sub>  
 ```
 $ python sonar_sweep.py
 ```
