@@ -1,5 +1,6 @@
 Usage:  
 <sub>Download the input file.  
+</br>  
 
 sonar_sweep.c:  
 ```
@@ -7,7 +8,7 @@ $ gcc sonar_sweep.c
 $ chmod +x a.out
 $ ./a.out input
 ```
-</br>
+</br>  
 
 sonar_sweep.py:  
 <sub><sup><b>NOT WORKING</b></sup></sub>  
@@ -15,8 +16,9 @@ sonar_sweep.py:
 ```
 $ python sonar_sweep.py
 ```
+</br>  
 
-I was wondering why my output was off by one  
+I was wondering why the output was off by one  
 Going from a 3 digit integer to 4 was too hot to handle  
 ```
 Output:
@@ -37,8 +39,47 @@ index =  205
 1027  (increased)
 count =  167
 index =  206
+```  
+
+</br>  
+The pattern repeats when we increase digits then settles on the next iteration.  
+```
+8026  (increased)
+count =  1547
+index =  1999
+
+9994  (increased)
+count =  1548
+index =  2000
+
+10001  (decreased) <-
+10002  (increased)
+count =  1549
+index =  2002
+
+10006  (increased)
+count =  1550
+index =  2003
+
+99999  (increased)
+count =  1551
+index =  2004
+
+100001  (decreased) <-
+999999  (increased)
+count =  1552
+index =  2006
+
+1000001  (decreased) <-
+9999999  (increased)
+count =  1553
+index =  2008
+
+10000001  (decreased) <-
+...
 ```
 
+</br>  
 All other times it worked as intended.  
 ```
 Output:
@@ -65,9 +106,10 @@ index =  251
 count =  1547
 index =  1999
 There are  1547  measurements that are larger than the previous measurement
-```
+```  
 
-C version:
+</br>  
+C version:  
 ```
 Output:
 ...
