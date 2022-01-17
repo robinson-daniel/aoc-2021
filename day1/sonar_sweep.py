@@ -29,7 +29,7 @@ for index, current_depth in enumerate(data):
         print(data[index],' (N/A - no previous measurement)')
     else: 
         prev_depth = data[index-1]
-        if current_depth > prev_depth:
+        if int(current_depth) > int(prev_depth):
             print(data[index],' (increased)')
             count+=1
             print('count = ',count)
