@@ -7,37 +7,39 @@
 #
 
 import sys
-import time
 
 data = []
 depth = 0
 count = 0
-
 
 #
 # Part 1
 #
 
 # read in depth values
-with open('input', 'r') as file:
-    for depth in file.read().splitlines():
-        data.append(depth)
+try:
+    with open('/home/dan/src/adventofcode-2021/day1/input', 'r') as file:
+        for depth in file.read().splitlines():
+            data.append(depth)
+except FileNotFoundError:
+    sys.exit('File not found!')
 
 # Compare individual depth values
 for index, current_depth in enumerate(data):
     if index == 0:
-        print(data[index],' (N/A - no previous measurement)')
+        print(f'{data[index]} (N/A - no previous measurement)')
     else: 
         prev_depth = data[index-1]
         if int(current_depth) > int(prev_depth):
-            print(data[index],' (increased)')
+            print(f'{data[index]} (increased)')
             count+=1
-            print('count = ',count)
-            print('index = ',index)
+            print(f'count = {count}')
+            print(f'index = {index}')
         else:
-            print(data[index],' (decreased)')
+            print(f'{data[index]} (decreased)')
 
-print('There are ', count, ' measurements that are larger than the previous measurement')
+# Print part 1 result
+print(f'There are {count} measurements that are larger than the previous measurement')
 
 
 #
