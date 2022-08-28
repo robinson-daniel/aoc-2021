@@ -33,8 +33,6 @@ for index, current_depth in enumerate(data):
         if int(current_depth) > int(prev_depth):
             print(f'{data[index]} (increased)')
             count+=1
-            print(f'count = {count}')
-            print(f'index = {index}')
         else:
             print(f'{data[index]} (decreased)')
 
