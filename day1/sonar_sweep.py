@@ -11,6 +11,8 @@ import sys
 data = []
 depth = 0
 count = 0
+input_size = 2000
+window_size = 3
 
 #
 # Part 1
@@ -42,4 +44,26 @@ print(f'There are {count} measurements that are larger than the previous measure
 
 #
 # Part 2
-#
+# 
+
+# Compare three-measurement sliding window of depth values
+index=0
+current_depth=0
+
+for index, current_depth in enumerate(data):
+    if index == 0:
+        if (index < 1997): current_window = current_depth + data[index+1] + data[index+2]
+        print(f'{current_window} (N/A - no previous measurement)')
+    else:
+        if (index < 1997): 
+            current_window = current_depth + data[index+1] + data[index+2]
+            next_window = data[index+1] + data[index+2] + data[index+3]
+
+        if int(current_window) < int(next_window):
+            print(f'{current_window} (decreased)')
+        else:
+            print(f'{current_window} (increased)')
+            count+=1
+
+# Print part 1 result
+print(f'There are {count} sums that are larger than the previous sum')
